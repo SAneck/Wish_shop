@@ -1,6 +1,7 @@
-export const ProductCard_content = [{
+export const productCard = {
+    id: 0,
     name: "Кольцо гвоздь",
     manufacturer: "Cartier",
-    price: "200 000₽",
+    price: 200000,
     url: "../public/cartier.png"
-}]
+}

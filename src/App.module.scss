@@ -1,7 +1,6 @@
-body{
+.wrapper{ 
 	width: 1440px;
-	.wrapper{ 
-		max-width: 1440px;
-		display: inline-block;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
