@@ -1,9 +1,9 @@
-import classes_header from './Header.module.scss'
+import classes from './Header.module.scss'
 
 export const Header = () => {
     return (
-        <div className={classes_header.header}>
-            <p className={classes_header.logo}>Wish</p>
+        <div className={classes.header}>
+            <p className={classes.logo}>Wish</p>
             <ul>
                 <li><a href = "#">Каталог</a></li>
                 <li><a href = "#">Поддержка</a></li>

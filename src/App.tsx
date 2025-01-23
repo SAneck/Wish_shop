@@ -1,23 +1,16 @@
 import classes from './App.module.scss'
-import { Header } from './header'
-import { ProductCard } from './ProductCard'
-
+import { Header } from './components/header/header'
+import { ProductCard } from './components/productCard/ProductCard'
+import { productCard } from './components/productCard/ProductCardContent'
 export const App = () => {
 	return (
-		<div className={classes.wrapper}>
+		<div className={classes.container}>
 			<Header />
-
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			<ProductCard />
-			
+			<div className={classes.wrapper}>
+				{Array.from({length: 12}, (_, index) =>(
+					<ProductCard key={index} card={productCard}/>
+				))}
+			</div>
 		</div>
 	)
 }
