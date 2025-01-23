@@ -15,8 +15,8 @@ export const ProductCard:FC<Props> = ({card})  => {
             <div className={classes.content}>
                 <h4>{card.name}</h4>
                 <h5>{card.manufacturer}</h5>
-                <p>{card.price}</p>
-                <button>В корзину</button>
+                <p>{card.price}Р</p>
+                <button >В корзину</button>
             </div>
         </div>
         )
