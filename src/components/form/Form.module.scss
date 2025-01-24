@@ -1,0 +1,66 @@
+.wrapper {
+    width: 100%;
+
+    .radio {
+        margin-top: 5px;
+        position: relative;
+        width: fit-content;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .radioStroke{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width:100px;
+            
+            .radioInput {
+                display: flex;
+                align-items: center;
+                appearance: none;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                background: #0469FF;
+                box-shadow: inset 0 0 5px rgb(0 0 0 / 0.2);
+                border-radius: 10px;
+                border: 1px solid #FFFFFF;
+                transition: 500ms;
+                border-radius: 50%;
+            }
+
+            .radioInput::after {
+                display: flex;
+                align-items: center;
+                content: "";
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                font-size: 30px;
+                background-image: url("../../../public/check.svg");
+                background-repeat: no-repeat;
+                transition: 500ms;
+            }
+            .radioInput::after {
+                background-image: url("../../../public/check.svg");   
+            }
+            .radioInput:checked::after {
+              width: 30px;
+              height: 30px;
+              transition: 500ms;
+            }
+
+            .radioInput:disabled {
+              background: #ccc;
+              border-color: #ccc;
+            }
+
+            .radioInput:disabled::after {
+              filter: grayscale(100%);
+            }
+        }  
+    }
+}

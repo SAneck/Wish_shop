@@ -3,4 +3,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	.cards {
+		width:1150px;
+		display: flex;
+		flex-wrap: wrap;
+	}	
+	.sideBar{
+		width: 290px;
+	}
 }

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import classes from "./slider.module.scss"
 import { sliderContent } from "./sliderContent"
 
@@ -11,10 +11,16 @@ export const Slider = () => {
         }
 
     let slider = sliderContent[index] 
-    setTimeout(handleClick, 3500)
+
+    useEffect(()=> {
+        const timeout = setTimeout(handleClick, 3500)
+        return () => {
+            clearTimeout(timeout)
+        }
+    },[index])
     return (
         <section className={classes.container}>
-            <img src={slider.url} alt={slider.alt}/> 
+            <img src={slider.url} alt={slider.alt}/>
       </section>
     )
 }
