@@ -1,8 +1,16 @@
 body {
 	width: 1440px;
-	margin: 0 auto;
-	.wrapper {
-		max-width: 1440px;
-		display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.cards {
+		width: 1150px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.sideBar {
+		width: 290px;
 	}
 }
