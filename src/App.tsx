@@ -7,17 +7,17 @@ import { Slider } from './components/slider/Slider'
 
 export const App = () => {
 	return (
-		<div className={classes.container}>
+		<div className={classes.wrapper}>
 			<Header />
 			<Slider />
 			<h1>Каталог</h1>
 			<div className={classes.wrapper}>
-				<div className={classes.sideBar}> 
+				<div className={classes.sideBar}>
 					<SideBar />
 				</div>
 				<div className={classes.cards}>
-					{Array.from({length: 12}, (_, index) =>(
-						<ProductCard key={index} card={productCard}/>
+					{Array.from({ length: 12 }, (_, index) => (
+						<ProductCard key={index} card={productCard} />
 					))}
 				</div>
 			</div>
