@@ -7,25 +7,25 @@ export const Form = () =>{
                 <div className={classes.radioStroke}>
                     <input className={classes.radioInput} type="radio" id="0" name="radio" />
                     <label className={classes.radioLabel}>
-                       1-2000
+                       1-5000
                     </label>
                 </div>
                 <div className={classes.radioStroke}>
                     <input className={classes.radioInput} type="radio" id="1" name="radio" />
                     <label className={classes.radioLabel}>
-                       2001 - 5000
+                       1-5000
                     </label>
                 </div>
                 <div className={classes.radioStroke}>
                     <input className={classes.radioInput} type="radio" id="2" name="radio" />
                     <label className={classes.radioLabel}>
-                       5000 - 10000
+                       1-5000
                     </label>
                 </div>
                 <div className={classes.radioStroke}>
                     <input className={classes.radioInput} type="radio" id="3" name="radio" />
                     <label className={classes.radioLabel}>
-                       {'>'}1000
+                       1-5000
                     </label>
                 </div>
              </div>

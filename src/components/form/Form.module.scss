@@ -13,10 +13,10 @@
         .radioStroke{
 
             display: flex;
-            text-align: left;
+            align-items: center;
             justify-content: space-between;
-            width:150px;
-
+            width:100px;
+            
             .radioInput {
                 display: flex;
                 align-items: center;
@@ -44,11 +44,9 @@
                 background-repeat: no-repeat;
                 transition: 500ms;
             }
-
             .radioInput::after {
                 background-image: url("../../../public/check.svg");   
             }
-            
             .radioInput:checked::after {
               width: 30px;
               height: 30px;
