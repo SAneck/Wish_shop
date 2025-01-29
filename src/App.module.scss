@@ -1,16 +1,22 @@
 body {
 	width: 1440px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	margin: 0 auto;
 
-	.cards {
-		width: 1150px;
-		display: flex;
-		flex-wrap: wrap;
-	}
+	.container{
 
-	.sideBar {
-		width: 290px;
+		.wrapper{
+			width: 1440px;
+			display: flex;
+		}
+		.cards {
+			width: 1150px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.sideBar {
+			width: 290px;
+		}
 	}
 }

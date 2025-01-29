@@ -1,12 +1,21 @@
 import classes from './ProductCardStyle.module.scss'
 import { Card } from '../../interfaces/interface'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 interface Props {
 	card: Card
 }
 
 export const ProductCard: FC<Props> = ({ card }) => {
+	
+	const [cards, setCards] = useState([])
+
+	// useEffect(()=>{
+	// 	fetch('https://jsonplaceholder.typicode.com/photos/1')
+    //   	.then(response => response.json())
+    //   	.then(json => setCards(json))
+	// })
+	
 	return (
 		<div className={classes.productCard_body}>
 			<div className={classes.content_img}>

@@ -1,13 +1,17 @@
+import { useState } from 'react'
 import classes from './App.module.scss'
 import { Header } from './components/header/header'
-import { ProductCard } from './components/productCard/ProductCard'
-import { productCard } from './components/productCard/ProductCardContent'
+import { ProductCard } from './components/ProductCard/ProductCard'
+import { productCard } from './components/ProductCard/ProductCardContent'
 import { SideBar } from './components/sidebar/SideBar'
 import { Slider } from './components/slider/Slider'
 
 export const App = () => {
+
+	const [cards, setCards] = useState([])
+
 	return (
-		<div className={classes.wrapper}>
+		<div className={classes.container}>
 			<Header />
 			<Slider />
 			<h1>Каталог</h1>
@@ -16,9 +20,9 @@ export const App = () => {
 					<SideBar />
 				</div>
 				<div className={classes.cards}>
-					{Array.from({ length: 12 }, (_, index) => (
-						<ProductCard key={index} card={productCard} />
-					))}
+					{productCard.map((item, index) => 
+						<ProductCard card={item} />
+					)}
 				</div>
 			</div>
 		</div>
