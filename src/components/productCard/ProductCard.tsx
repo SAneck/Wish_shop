@@ -1,32 +1,26 @@
 import classes from './ProductCardStyle.module.scss'
 import { Card } from '../../interfaces/interface'
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 
 interface Props {
 	card: Card
+	drip: any
 }
 
-export const ProductCard: FC<Props> = ({ card }) => {
-	
-	const [cards, setCards] = useState([])
 
-	// useEffect(()=>{
-	// 	fetch('https://jsonplaceholder.typicode.com/photos/1')
-    //   	.then(response => response.json())
-    //   	.then(json => setCards(json))
-	// })
-	
+export const ProductCard: FC<Props> = ({ card, drip }) => {
+
 	return (
 		<div className={classes.productCard_body}>
 			<div className={classes.content_img}>
-				<img className={classes.productCard_img} src={card.url} />
+				<img className={classes.productCard_img} src={card.image} />
 			</div>
 			<div className={classes.content}>
-				<h4>{card.name}</h4>
-				<h5>{card.manufacturer}</h5>
-				<p>{card.price}</p>
-				<button>В корзину</button>
+				<h4 title={card.title}>{card.title}</h4>
+				<p>Price: {card.price}$</p>
+				<button onClick={() => drip()}>В корзину</button>
 			</div>
+			
 		</div>
 	)
 }

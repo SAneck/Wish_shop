@@ -9,7 +9,6 @@ export const Slider = () => {
     const handleClick = () => {
         start ? setIndex(index + 1) : setIndex(0)
         }
-
     let slider = sliderContent[index] 
 
     useEffect(()=> {

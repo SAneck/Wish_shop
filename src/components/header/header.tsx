@@ -1,5 +1,18 @@
+import { FC, useState } from 'react'
 import classes from './Header.module.scss'
-export const Header = () => {
+import {Modal} from '../basket/Basket'
+
+interface HeaderProps {
+	quantity: number | null
+}
+
+export const Header:FC<HeaderProps> = ({quantity}) => {
+
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+  	const openModal = () => setIsModalOpen(true);
+  	const closeModal = () => setIsModalOpen(false);
+
 	return (
 		<>
 			<div className={classes.header}>
@@ -17,9 +30,11 @@ export const Header = () => {
 						<a href='../favorite/Favorite'>Избранное</a>
 					</li>
 					<li>
-						<a href='/'>Корзина</a>
+						<button onClick={openModal}>Корзина {quantity}</button>
+						<Modal isOpen={isModalOpen} onClose={closeModal} title="Ваша корзина">
+        					<p>Это Модальное окно</p>
+      					</Modal>
 					</li>
-					<input type='text' placeholder='Искать'></input>
 				</ul>
 				<a href='#'>Вход</a>
 			</div>

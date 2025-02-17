@@ -1,7 +1,7 @@
 export interface Card {
 	id: number
-	name: string
-	manufacturer: string
-	price: string
-	url: string
+	title: string
+	price: number
+	description: string
+	image: string
 }

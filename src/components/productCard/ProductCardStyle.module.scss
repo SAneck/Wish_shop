@@ -1,7 +1,7 @@
 .productCard_body {
 	display: inline-block;
 	margin: 0 auto;
-	width: 180px;
+	width: 260px;
 	height: 260px;
 	border: 1px black solid;
 	border-radius: 10px;
@@ -13,11 +13,15 @@
 		text-align: center;
 
 		.productCard_img {
+			margin-top: 10px;
 			width: 100px;
 			height: 100px;
 		}
 	}
 	h4 {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		font-size: 20px;
 		margin: 0px;
 		padding: 5px 5px;
@@ -28,6 +32,8 @@
 		padding: 5px 5px;
 	}
 	p {
+		font-weight: 500;
+		font-size: 20px;
 		margin: 0px;
 		padding: 5px 5px;
 	}
