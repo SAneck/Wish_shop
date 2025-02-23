@@ -4,7 +4,7 @@ import { FC } from 'react'
 
 interface Props {
 	card: Card
-	drip: any
+	drip: () => void
 }
 
 
